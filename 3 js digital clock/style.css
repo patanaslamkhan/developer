@@ -1,0 +1,59 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+#digitalclock{
+    height: 100vh;
+    width: 100vw;
+    background:linear-gradient(45deg,skyblue,white,pink);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#digitalclock div{
+    height: 250px;
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 125px;
+    font-size: 35px;
+}
+#hoursbox{
+    background: radial-gradient(skyblue,white,pink);
+    border: 6px solid aqua;
+}
+#hours{
+    margin-right: 10px;
+}
+#minutesbox{
+    background: radial-gradient(skyblue,white,pink);
+    border: 6px solid rgb(78, 202, 233);
+}
+#secondsbox{
+    background: radial-gradient(skyblue,white,pink);
+    border: 6px solid rgb(241, 20, 182);
+    padding-right: 20px;
+    animation:  seconds;
+}
+@keyframes seconds{
+    from{
+        transform: rotate(360deg)
+    }
+}
+#srotater{
+    position: relative;
+    right: 80px;
+}
+@media (max-width:680px){
+    body{
+        background:linear-gradient(45deg,skyblue,white,pink);
+    }
+    #digitalclock{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}

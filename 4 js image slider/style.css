@@ -1,0 +1,52 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: skyblue;
+}
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.frame{  
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+}
+.imagesset{
+    display: flex;
+    transition: all 800ms linear;
+    cursor: pointer;
+}
+.arrow{
+    height: 80px;
+    border-radius:55px;
+    padding: 15px;
+    cursor: pointer;
+}
+.leftarrow{
+    transform: rotate(180deg);
+}
+.imagesset img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+#buttons{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    position: relative;
+    bottom: 80px;
+}
+.cbtn{
+    height: 15px;
+    width: 15px;
+    border-radius: 50px;
+    border: 4px solid green;
+    cursor: pointer;
+}

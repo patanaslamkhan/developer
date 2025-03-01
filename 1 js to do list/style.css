@@ -1,0 +1,73 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+#container{
+    height: 100vh;
+    width: 100vw;
+    background-color: blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+h1{
+    color: azure;
+    font-size: 50px;
+    margin: 15px;
+    position: relative;
+    left: -25px;
+}
+#dc1{
+margin-bottom: 20px;
+}
+#listcreater{
+    height: 50px;
+    width: 500px;
+    border-radius: 5px;
+}
+#dc1 button{
+    height: 30px;
+    width: 40px;
+    background-color:black;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    position: relative;
+    left: 15px;
+}
+#dc2{
+    background-color: skyblue;
+    width: 580px;
+    border-radius: 5px;
+}
+#listitems li{
+    font-size: large;
+    color: white;
+    list-style: none;
+    position: relative;
+    line-height: 40px;
+}
+#listitems li::before{
+    content: "🔲";
+    margin-right: 10px;
+}
+#listitems li.checked::before{
+    content: "☑️";
+}
+.checked b{
+    text-decoration: line-through;
+}
+.delbtn{
+    font-size: 35px;
+    color: red;
+    position: absolute;
+    left: 550px;
+    top: 2px
+}
+
+
+
+
+

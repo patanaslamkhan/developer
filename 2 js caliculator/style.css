@@ -1,0 +1,69 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body{
+    height: 100vh;
+    width: 100%;
+    background-image: url(istockphoto-1424937932-2048x2048.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+input{
+    width: 350px;
+    height: 80px;
+    padding: 30px;
+    margin-bottom: 25px;
+    background-color: rgba(5, 5, 40, 0.9);
+    box-shadow: 5px 5px 5px rgba(0, 0, 35, 0.9);
+    border-radius: 5px;
+    text-align: right;
+    color: #fff;
+    font-size: 30px;
+}
+button{
+    position: relative;
+    left: 5px;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+    background-color: rgba(0, 0, 35, 0.9);
+    box-shadow: 5px 5px 5px rgba(0, 0, 35,0.9);
+    color: #fff;
+    font-size: 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover{
+    color: rgba(4, 37, 100, 0.9);
+    background-color: rgba(207, 168, 70, 0.9);
+}
+.btn{
+    color: rgba(10, 91, 116, 0.9);
+    background-color: rgba(169, 198, 207, 0.9);
+}
+.eqlbtn{
+    background-color: rgba(10, 143, 209, 0.9);
+}
+@media (max-width:450px){
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #caliculator{
+        width: 100%;
+        margin: 0px 20px;
+    }
+    #inputbox{
+        width: 90%;
+    }
+    button{
+        width: 20%;
+    }
+}
