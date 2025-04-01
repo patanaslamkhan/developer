@@ -1,0 +1,211 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+}
+nav{
+    background: linear-gradient(45deg, #ffba61, #D72638);
+    padding: 25px;
+}
+nav h1 div{
+    position: relative;
+}
+nav h1 .div1 i{
+    position: absolute;
+    right: -20px;
+    top: -20px;
+    transform: rotate(30deg);
+    color: rgb(254, 220, 191);
+}
+nav h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav h1 img{
+    max-width: 200px;
+    border-radius: 5px;
+}
+nav h1 span{
+    margin-left: 10px;
+    font-size: xx-large;
+    color: rgb(247, 234, 157);
+}
+nav h1 span i{
+    color: rgb(248, 171, 77);
+}
+nav h1 span{
+    position: relative;
+}
+nav h1 span form{
+    position: relative;
+    top: 60px;
+}
+nav h1 span form div {
+    display: flex;
+    justify-content: space-between;
+}
+nav h1 span form input{
+    padding: 8px;
+    width: 85%;
+    border: none;
+    outline: none;
+    color: #f68d04;
+    font-size: large;
+    border-radius: 2px;
+}
+nav h1 span form button{
+    width: 33px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 25px;
+    border-radius: 2px;
+}
+.recipediv{
+    background-image: url(cake\ prepare.webp);
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.recipediv .choice{
+    position: absolute;
+    top: 40px;
+    left: 40px;
+}
+.choice{
+    display: flex;
+}
+.choice div{
+    margin: 10px;
+    background-color: skyblue;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.choice div img{
+    max-width: 150px;
+}
+.choice h5{
+    text-align: center;
+}
+.recipediv .recipedivframe{
+    background-color: rgb(241, 206, 212);
+    border-radius: 5px;
+    margin: 5px;
+    max-width: 350px;
+}
+.recipediv img{
+    max-width: 350px;
+    border-radius: 5px;
+}
+.recipedivframe h3{
+    display: flex;
+    justify-content: center;
+}
+.recipedivframe button{
+    width: 100%;
+    background-color: skyblue;
+    border: none;
+    outline: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: xx-large;
+    cursor: pointer;
+}
+.viewnow{
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(45deg, #ffba61, #D72638);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.viewnow div{
+    max-width: 350px;
+    background-color: skyblue;
+    border-radius: 5px;
+}
+.viewnow h3{
+    text-align: center;
+}
+.viewnow button{
+    width: 100%;
+    font-size: xx-large;
+    background-color: green;
+    color: whitesmoke;
+    border: none;
+    outline: none;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    background-color: black;
+    color: aliceblue;
+   
+}
+@media(max-width:720px){
+    .container nav{
+        max-width: 100%;
+    }
+    .recipediv .choice{
+        position: absolute;
+        top: 2px;
+        left: 2px;
+    }
+    .choice{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .choice div{
+        margin: 10px;
+        background-color: skyblue;
+        border-radius: 5px;
+    }
+    .choice div img{
+        max-width: 70px;
+    }
+    .choice h5{
+        text-align: center;
+    }
+    .recipediv .recipedivframe{
+        max-width: 150px;
+    }
+    .recipediv .recipedivframe img{
+        max-width: 150px;
+    }
+    .recipediv h3{
+        font-size: 20px;
+    }
+    .recipedivframe button{
+        font-size: large;
+    }
+}
+
+@media(max-width:550px){
+    .recipediv div img{
+        max-width: 300px;
+    }
+    .recipediv div h3{
+        font-size: 20px;
+    }
+}
+
+@media(max-width:360px){
+    .recipediv div img{
+        max-width: 250px;
+    }
+    .recipediv div h3{
+        font-size: 20px;
+    }
+}
