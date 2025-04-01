@@ -1,1 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bomb Shooter</title>
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.55.2/dist/phaser.js"></script>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
 
+<script>
+const config = {
+    type: Phaser.AUTO,
+    width: 800,
+    height: 600,
+    physics: {
+        default: 'arcade',
+        arcade: {
+            gravity: { y: 0 },
+            debug: false
+        }
+    },
+    scene: {
+        preload: preload,
+        create: create                                                                                     ,
+        update: update
+    }
+};
+
+const game = new Phaser.Game(config);
+
+function preload() {
+    this.load.image('background', 'assets/background.png');
+    this.load.image('player', 'assets/player.png');
+    this.load.image('bomb', 'assets/bomb.png');
+    this.load.image('bullet', 'assets/bullet.png');
+}
+
+function create() {
+    this.add.image(400, 300, 'background');
+
+    this.player = this.physics.add.sprite(400, 550, 'player');
+    this.player.setCollideWorldBounds(true);
+
+    this.cursors = this.input.keyboard.createCursorKeys();
+    this.spaceBar = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.SPACE);
+
+    this.bombs = this.physics.add.group();
+    this.bullets = this.physics.add.group();
+
+    this.physics.add.collider(this.bullets, this.bombs, destroyBomb, null, this);
+
+    this.time.addEvent({
+        delay: 1000,
+        callback: spawnBomb,
+        callbackScope: this,
+        loop: true
+    });
+}
+
+function update() {
+    if (this.cursors.left.isDown) {
+        this.player.setVelocityX(-160);
+    } else if (this.cursors.right.isDown) {
+        this.player.setVelocityX(160);
+    } else {
+        this.player.setVelocityX(0);
+    }
+
+    if (Phaser.Input.Keyboard.JustDown(this.spaceBar)) {
+        shootBullet.call(this);
+    }
+}
+
+function shootBullet() {
+    const bullet = this.bullets.create(this.player.x, this.player.y, 'bullet');
+    bullet.setVelocityY(-300);
+}
+
+function spawnBomb() {
+    const x = Phaser.Math.Between(0, 800);
+    const bomb = this.bombs.create(x, 0, 'bomb');
+    bomb.setVelocityY(100);
+}
+
+function destroyBomb(bullet, bomb) {
+    bullet.destroy();
+    bomb.destroy();
+}
+</script>
+
+</body>
+</html>

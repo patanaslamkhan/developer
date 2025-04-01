@@ -185,27 +185,26 @@ footer{
         max-width: 150px;
     }
     .recipediv h3{
-        font-size: 20px;
+        font-size: 10px;
     }
     .recipedivframe button{
         font-size: large;
     }
 }
-
 @media(max-width:550px){
-    .recipediv div img{
+    .viewnow div img{
         max-width: 300px;
     }
-    .recipediv div h3{
+    .viewnow div h3{
         font-size: 20px;
     }
 }
 
 @media(max-width:360px){
-    .recipediv div img{
+    .viewnow div img{
         max-width: 250px;
     }
-    .recipediv div h3{
+    .viewnow div h3{
         font-size: 20px;
     }
 }
